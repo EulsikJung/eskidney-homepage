@@ -137,7 +137,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .nav>li{position:relative}
 .nav>li>a{
   display:flex;align-items:center;gap:5px;
-  padding:10px 16px;font-size:.88rem;font-weight:700;
+  padding:10px 17px;font-size:1.02rem;font-weight:700;
   color:var(--gray-700);transition:var(--transition);white-space:nowrap;
 }
 .nav>li>a:hover,.nav>li>a.active{color:var(--primary)}
@@ -156,7 +156,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .nav>li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
 .dropdown li a{
   display:flex;align-items:center;gap:8px;
-  padding:10px 20px;font-size:.85rem;color:var(--gray-700);
+  padding:11px 20px;font-size:.95rem;color:var(--gray-700);
   transition:var(--transition);
 }
 .dropdown li a:hover{background:var(--primary-light);color:var(--primary);padding-left:26px}
