@@ -1,0 +1,18 @@
+# 작업용 스크립트 (배포 불필요)
+*.py
+
+# 원본 자료
+*.xlsx
+*.ai
+사진촬영목록.md
+
+# 사진: 폴더 전체 무시 후 실사용분만 -f로 추가
+pictures/
+
+# 빈 폴더
+images/
+
+# 기타
+.claude/
+.DS_Store
+Thumbs.db

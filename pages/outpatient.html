@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>진료 안내 | 정을식내과의원</title>
+  <meta name="description" content="정을식내과의원 진료 안내. 혈액투석·신장질환·건강검진·만성질환·급성기 질환. 신장내과·내과·가정의학과 4인 전문의 진료."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/subpage.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* 진료 안내 페이지 전용 */
+    .op-nav a {
+      display: inline-block;
+      padding: 16px 24px;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--gray-500);
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .op-nav a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .disease-tag {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      border-radius: 10px;
+      padding: 13px 16px;
+      border: 1px solid rgba(11,61,143,.1);
+    }
+    .disease-tag i {
+      color: var(--primary);
+      font-size: .8rem;
+    }
+    .disease-tag span {
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+    .disease-tag.purple-border {
+      border-color: rgba(91,33,182,.12);
+    }
+    .disease-tag.purple-border i {
+      color: var(--purple);
+    }
+    .dialysis-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .dialysis-feature:last-child {
+      border-bottom: none;
+    }
+    .dialysis-feature i {
+      color: #7EC8E3;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .dialysis-feature strong {
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .dialysis-feature span {
+      font-size: .9rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.7;
+    }
+    .equip-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 7px 14px;
+      border-radius: 100px;
+      font-size: .82rem;
+      font-weight: 700;
+      border: 1px solid rgba(11,61,143,.12);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- ══════════════════ PAGE HERO ══════════════════ -->
+<section class="page-hero purple">
+  <div class="page-hero-deco"></div>
+  <div class="page-hero-deco2"></div>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="../index.html">홈</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>진료 안내</span>
+    </nav>
+    <h1>진료 안내</h1>
+    <p>정을식내과의원이 자신 있는 다섯 가지 진료 분야</p>
+  </div>
+</section>
+
+<!-- ══════════════════ 스티키 목차 네비게이션 ══════════════════ -->
+<div style="background:var(--white); border-bottom:1px solid var(--gray-100); position:sticky; top:100px; z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.06);">
+  <div class="container">
+    <nav class="op-nav" style="display:flex; gap:0; overflow-x:auto;">
+      <a href="#dialysis">혈액투석</a>
+      <a href="#kidney">신장질환</a>
+      <a href="#checkup-link">건강검진</a>
+      <a href="#chronic">만성질환</a>
+      <a href="#acute">급성기 질환</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ══════════════════ 섹션 1: 혈액투석 ══════════════════ -->
+<section id="dialysis" class="sub-section fade-up" style="background:var(--grad-dark); padding:100px 0;">
+  <div class="container">
+    <div class="content-grid" style="gap:60px; align-items:center;">
+
+      <!-- 왼쪽 텍스트 -->
+      <div>
+        <div class="section-label white">HEMODIALYSIS</div>
+        <h2 class="section-title white" style="font-size:clamp(2.1rem,4vw,3.2rem); margin-bottom:20px; line-height:1.2;">
+          안전하고 전문적인<br>혈액투석
+        </h2>
+        <p style="font-size:1.05rem; color:rgba(255,255,255,.78); line-height:1.95; margin-bottom:16px;">
+          투석은 신장의 기능을 대신하는 생명 유지 치료입니다. 일주일에 세 번, 평생 받아야 하는 이 치료에서 '안전성'과 '전문성'은 타협할 수 없는 기준입니다.
+        </p>
+        <p style="font-size:1.05rem; color:rgba(255,255,255,.78); line-height:1.95; margin-bottom:28px;">
+          정을식내과의원은 신장내과 전문의 2인이 직접 모든 투석 환자를 관리합니다. 기계를 틀어놓고 자리를 비우는 것이 아니라, 전문의가 상주하며 혈압 변화, 체중 변화, 증상 변화 하나하나를 직접 파악합니다.
+        </p>
+
+        <!-- 특징 리스트 4개 -->
+        <div style="margin-top:28px;">
+          <div class="dialysis-feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>신장내과 전문의 2인 직접 진료</strong>
+              <span>정을식·김미정 원장이 모든 투석 환자를 직접 담당합니다</span>
+            </div>
+          </div>
+          <div class="dialysis-feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>FMC 5008S·6008S + Nipro NCU-18</strong>
+              <span>세계적 브랜드 3종 투석기를 환자 상태에 맞게 운영합니다</span>
+            </div>
+          </div>
+          <div class="dialysis-feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>격리투석실 보유</strong>
+              <span>B형간염·HIV 등 감염 위험 환자를 위한 완전 격리 환경을 갖추고 있습니다</span>
+            </div>
+          </div>
+          <div class="dialysis-feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>개인 32인치 TV 및 좌식 투석 가능</strong>
+              <span>긴 투석 시간이 편안하도록 환자 중심 시설을 갖추었습니다</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 비주얼 -->
+      <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+        <img src="../pictures/op_dialysis.jpg" alt="정을식내과의원 인공신장실 넓은 전경" style="width:100%;height:100%;min-height:440px;object-fit:cover;object-position:center;display:block;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 섹션 2: 신장질환 클리닉 ══════════════════ -->
+<section id="kidney" class="sub-section fade-up" style="background:var(--primary-light); padding:100px 0;">
+  <div class="container">
+    <div class="content-grid reverse" style="gap:60px; align-items:center;">
+
+      <!-- 비주얼 왼쪽 (reverse 적용) -->
+      <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+        <img src="../pictures/op_kidney.jpg" alt="원장이 환자와 상담하는 신장내과 진료 장면" style="width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center;display:block;">
+      </div>
+
+      <!-- 텍스트 오른쪽 -->
+      <div>
+        <div class="section-label">KIDNEY CLINIC</div>
+        <h2 class="section-title" style="margin-bottom:20px;">
+          신장내과 세부전문의가<br>직접 진료합니다
+        </h2>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:16px;">
+          신장은 한 번 나빠지면 회복이 어렵습니다. 그래서 조기 발견과 진행 억제가 핵심입니다. 단백뇨·혈뇨가 있다면, 부종이 반복된다면, 혈액검사에서 신장 수치가 높게 나왔다면 — 지금 바로 전문의에게 확인받으세요.
+        </p>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:24px;">
+          정을식·김미정 원장 두 분의 신장내과 세부전문의가 직접 진단합니다. 만성콩팥병 1~5단계 관리, 투석 준비, 합병증 예방까지 전 과정을 책임집니다.
+        </p>
+
+        <!-- 질환 목록 2열 -->
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:24px;">
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>만성콩팥병(CKD)</span>
+          </div>
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>사구체신염</span>
+          </div>
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>단백뇨·혈뇨</span>
+          </div>
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>신증후군</span>
+          </div>
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>부종 감별</span>
+          </div>
+          <div class="disease-tag">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>고요산혈증(통풍)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 섹션 3: 건강검진 ══════════════════ -->
+<section id="checkup-link" class="sub-section fade-up" style="background:white; padding:100px 0;">
+  <div class="container">
+    <div class="content-grid" style="gap:60px; align-items:center;">
+
+      <!-- 텍스트 왼쪽 -->
+      <div>
+        <div class="section-label" style="color:var(--teal); background:var(--teal-light);">HEALTH CHECKUP</div>
+        <h2 class="section-title" style="margin-bottom:20px;">
+          최신 장비로 진행하는<br>정밀 건강검진
+        </h2>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:16px;">
+          검진의 질은 장비가 결정합니다. 후지 ELUXEO 6000 내시경으로 미세한 점막 변화까지 확인하고, 삼성메디슨 초음파로 복부 장기 전체를 살펴봅니다.
+        </p>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:20px;">
+          검진 후 결과는 주치의와 당일 바로 상담합니다. 이상 소견이 있으면 즉시 추가 검사나 치료로 연결됩니다. 검진의 완성은 사후관리입니다.
+        </p>
+
+        <!-- 장비 뱃지 -->
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;">
+          <span class="equip-badge">FUJIFILM ELUXEO 6000</span>
+          <span class="equip-badge">Samsung Medison HS70A</span>
+          <span class="equip-badge">Xenoray MX-600</span>
+          <span class="equip-badge">Osteosys Dexxum T</span>
+          <span class="equip-badge">InBody BWA</span>
+          <span class="equip-badge">얼리텍 DNA 검사</span>
+        </div>
+
+        <!-- CTA 링크 -->
+        <a href="checkup.html" style="display:inline-flex; align-items:center; gap:8px; margin-top:24px; background:var(--primary); color:white; padding:14px 28px; border-radius:100px; font-weight:700; font-size:.95rem; text-decoration:none; transition:var(--transition);"
+           onmouseover="this.style.opacity='.88'; this.style.transform='translateY(-2px)';"
+           onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)';">
+          <i class="fa-solid fa-arrow-right"></i>
+          건강검진 자세히 보기
+        </a>
+      </div>
+
+      <!-- 비주얼 오른쪽 -->
+      <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+        <img src="../pictures/op_endo.jpg" alt="후지 ELUXEO 6000 위내시경 시술 장면" style="width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center;display:block;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 섹션 4: 만성질환 관리 ══════════════════ -->
+<section id="chronic" class="sub-section fade-up" style="background:linear-gradient(135deg,#F3F0FF,#EBF3FF); padding:100px 0;">
+  <div class="container">
+    <div class="content-grid reverse" style="gap:60px; align-items:center;">
+
+      <!-- 비주얼 왼쪽 (reverse) -->
+      <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+        <img src="../pictures/care_jeong.jpg" alt="정을식 원장이 청진기로 만성질환 환자를 진료하는 모습" style="width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center;display:block;">
+      </div>
+
+      <!-- 텍스트 오른쪽 -->
+      <div>
+        <div class="section-label" style="color:var(--purple); background:rgba(91,33,182,.1);">CHRONIC DISEASE</div>
+        <h2 class="section-title" style="margin-bottom:20px;">
+          꾸준한 관리가 답입니다<br>프리미엄 주치의
+        </h2>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:16px;">
+          고혈압, 당뇨, 고지혈증은 '관리'하는 병입니다. 완치보다 꾸준한 조절이 중요하고, 그 과정에서 나를 잘 아는 주치의 한 명이 큰 차이를 만듭니다.
+        </p>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:24px;">
+          24시간 활동혈압(CartBP), 24시간 혈당 모니터링, 24시간 홀터 심전도(모비케어)로 일상 속 실제 수치를 파악합니다. 병원에서 잠깐 재는 것으로는 알 수 없는, 진짜 내 몸 상태를 확인하세요.
+        </p>
+
+        <!-- 질환 목록 2열 -->
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:24px;">
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>고혈압·혈압관리</span>
+          </div>
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>제1·2형 당뇨병</span>
+          </div>
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>고지혈증·콜레스테롤</span>
+          </div>
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>갑상선질환</span>
+          </div>
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>골다공증</span>
+          </div>
+          <div class="disease-tag purple-border">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span>대사증후군</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 섹션 5: 급성기 질환 ══════════════════ -->
+<section id="acute" class="sub-section fade-up" style="background:white; padding:100px 0;">
+  <div class="container">
+    <div class="content-grid" style="gap:60px; align-items:center;">
+
+      <!-- 텍스트 왼쪽 -->
+      <div>
+        <div class="section-label" style="color:var(--teal); background:var(--teal-light);">ACUTE CARE</div>
+        <h2 class="section-title" style="margin-bottom:20px;">
+          흔한 증상일수록<br>더 정확하게 봅니다
+        </h2>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:16px;">
+          동네 의원에서 가장 흔히 보는 감기, 장염, 인후염 — 이런 질환이 쉬워 보여도 제대로 진단하고 치료하려면 경험과 실력이 필요합니다.
+        </p>
+        <p style="font-size:1.05rem; color:var(--gray-700); line-height:1.9; margin-bottom:24px;">
+          정을식내과의원의 4인 전문의는 급성기 질환도 자신 있게 진료합니다. 필요한 경우 혈액검사, 흉부 X-ray, 초음파 검사를 즉시 시행하여 정확한 원인을 파악합니다.
+        </p>
+
+        <!-- 질환 목록 2열 -->
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:24px;">
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>감기·인플루엔자</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>급성 장염·식중독</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>인후염·편도염</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>기관지염·폐렴</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>요로감염</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>급성 두드러기</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>발열 원인 검사</span>
+          </div>
+          <div class="disease-tag" style="border-color:rgba(8,145,178,.12);">
+            <i class="fa-solid fa-circle-dot" style="color:var(--teal);"></i>
+            <span>수액 치료</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 비주얼 -->
+      <div style="border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-xl);">
+        <img src="../pictures/care_us.jpg" alt="권규흠 원장이 초음파 검사를 시행하는 진료 장면" style="width:100%;height:100%;min-height:380px;object-fit:cover;object-position:center;display:block;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ 하단 CTA ══════════════════ -->
+<section class="sub-section fade-up" style="background:var(--primary); text-align:center; padding:72px 0;">
+  <div class="container">
+    <h2 style="font-family:'Noto Serif KR',serif; font-size:clamp(1.7rem,3vw,2.4rem); color:white; margin-bottom:14px;">
+      어떤 증상이든 편하게 오세요
+    </h2>
+    <p style="font-size:1.05rem; color:rgba(255,255,255,.78); margin-bottom:36px;">
+      정을식내과의원의 4인 전문의가 함께합니다
+    </p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="tel:032-426-2301"
+         style="display:inline-flex; align-items:center; gap:9px; background:white; color:var(--primary); padding:15px 32px; border-radius:100px; font-weight:700; font-size:1rem; text-decoration:none; transition:var(--transition);"
+         onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,.2)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <i class="fa-solid fa-phone"></i>
+        전화 예약
+      </a>
+      <a href="http://pf.kakao.com/_khLJT" target="_blank"
+         style="display:inline-flex; align-items:center; gap:9px; background:#FEE500; color:#3A1D1D; padding:15px 32px; border-radius:100px; font-weight:700; font-size:1rem; text-decoration:none; transition:var(--transition);"
+         onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,.2)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+        <i class="fa-solid fa-comment"></i>
+        카카오 상담
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../js/common.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

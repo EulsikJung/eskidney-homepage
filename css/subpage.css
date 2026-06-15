@@ -1,0 +1,317 @@
+/* ===================================
+   서브페이지 공통 스타일
+   =================================== */
+
+.page-hero {
+  margin-top: 100px;
+  background: var(--grad-blue);
+  padding: 64px 0 52px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 40px;
+  background: var(--white);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.page-hero.dark { background: var(--grad-dark); }
+.page-hero.dark::after { background: var(--gray-50); }
+.page-hero.teal { background: linear-gradient(135deg,#065F46,#0891B2); }
+.page-hero.teal::after { background: var(--white); }
+.page-hero.purple { background: linear-gradient(135deg,#1B3A6B,#5B21B6); }
+.page-hero.purple::after { background: var(--white); }
+
+.page-hero-deco {
+  position: absolute; width: 320px; height: 320px;
+  border-radius: 50%; background: rgba(255,255,255,.05);
+  top: -80px; right: 5%;
+}
+.page-hero-deco2 {
+  position: absolute; width: 180px; height: 180px;
+  border-radius: 50%; background: rgba(255,255,255,.04);
+  bottom: -40px; right: 22%;
+}
+.page-hero .container { position: relative; z-index: 2; }
+
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: .78rem; color: rgba(255,255,255,.6);
+  margin-bottom: 16px;
+}
+.breadcrumb a { color: rgba(255,255,255,.6); transition: var(--transition); }
+.breadcrumb a:hover { color: white; }
+.breadcrumb i { font-size: .6rem; }
+
+.page-hero h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700; color: white; margin-bottom: 12px;
+  letter-spacing: -.03em; line-height: 1.2;
+}
+.page-hero p { font-size: 1.08rem; color: rgba(255,255,255,.78); line-height: 1.8; }
+
+/* 서브 섹션 */
+.sub-section { padding: 80px 0; }
+.sub-section-alt { background: var(--gray-50); }
+
+/* 2단 콘텐츠 */
+.content-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: center;
+}
+.content-grid.reverse { direction: rtl; }
+.content-grid.reverse > * { direction: ltr; }
+.content-visual {
+  border-radius: var(--radius-xl); overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.content-visual .placeholder-img { min-height: 340px; }
+
+/* 스텝 */
+.steps { display: flex; flex-direction: column; gap: 18px; }
+.step {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg); padding: 22px;
+  transition: var(--transition);
+}
+.step:hover { box-shadow: var(--shadow-md); border-color: rgba(11,61,143,.15); transform: translateX(5px); }
+.step-num {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--grad-blue);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: .95rem; font-weight: 800; flex-shrink: 0;
+}
+.step h4 { font-size: 1.05rem; font-weight: 700; color: var(--gray-900); margin-bottom: 5px; }
+.step p { font-size: .93rem; color: var(--gray-500); line-height: 1.78; }
+
+/* 특징 아이템 */
+.feature-list { display: flex; flex-direction: column; gap: 12px; }
+.feature-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--primary-light);
+  border-radius: var(--radius); border-left: 4px solid var(--primary);
+}
+.feature-item i { color: var(--primary); font-size: 1rem; margin-top: 3px; flex-shrink: 0; }
+.feature-item h5 { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+.feature-item p { font-size: .92rem; color: var(--gray-500); line-height: 1.75; }
+
+/* 의사 상세 카드 */
+.doctor-detail-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
+.doctor-detail-card {
+  background: var(--white); border-radius: var(--radius-xl);
+  overflow: hidden; box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100); transition: var(--transition);
+}
+.doctor-detail-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+.ddc-top { display: flex; min-height: 190px; }
+.ddc-photo {
+  width: 150px; flex-shrink: 0;
+  background: linear-gradient(135deg,#dce9f8,#b8d0f0);
+}
+.ddc-photo .placeholder-img { height: 100%; }
+.ddc-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ddc-meta {
+  flex: 1; padding: 22px 20px;
+  background: var(--grad-blue);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.ddc-dept {
+  font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  background: rgba(255,255,255,.18); color: white;
+  display: inline-block; padding: 4px 11px; border-radius: 100px; margin-bottom: 10px;
+}
+.ddc-meta h3 { font-size: 1.45rem; font-weight: 800; color: white; margin-bottom: 5px; }
+.ddc-meta .spec { font-size: .88rem; color: rgba(255,255,255,.75); margin-bottom: 14px; }
+.ddc-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ddc-tags span {
+  font-size: .68rem; background: rgba(255,255,255,.15);
+  color: rgba(255,255,255,.9); padding: 3px 9px; border-radius: 100px;
+}
+.ddc-body { padding: 22px 22px 20px; }
+.ddc-career { list-style: none; }
+.ddc-career li {
+  font-size: .83rem; color: var(--gray-600);
+  padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+}
+.ddc-career li::before { content: '·'; color: var(--primary); font-weight: 900; flex-shrink: 0; }
+.btn-video-full {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; padding: 12px; margin-top: 18px; border-radius: 12px;
+  background: linear-gradient(135deg,var(--primary),var(--teal));
+  color: white; font-size: .88rem; font-weight: 700;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(11,61,143,.25);
+}
+.btn-video-full:hover { opacity: .9; transform: translateY(-2px); }
+.btn-video-disabled-full {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 12px; margin-top: 18px; border-radius: 12px;
+  background: var(--gray-100); color: var(--gray-400);
+  font-size: .85rem; font-weight: 500;
+}
+
+/* 질환 카드 */
+.disease-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.disease-card {
+  background: var(--white); border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg); padding: 28px 22px;
+  text-align: center; transition: var(--transition);
+}
+.disease-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.disease-icon {
+  width: 64px; height: 64px; border-radius: 18px;
+  background: var(--primary-light); color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin: 0 auto 16px; transition: var(--transition);
+}
+.disease-card:hover .disease-icon { background: var(--primary); color: white; }
+.disease-card h4 { font-size: 1.08rem; font-weight: 700; color: var(--gray-900); margin-bottom: 9px; }
+.disease-card p { font-size: .93rem; color: var(--gray-500); line-height: 1.75; }
+
+/* 갤러리 */
+.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.gallery-item {
+  border-radius: var(--radius); overflow: hidden;
+  aspect-ratio: 4/3; cursor: pointer;
+  box-shadow: var(--shadow-sm); transition: var(--transition);
+  position: relative;
+}
+.gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-item .placeholder-img { height: 100%; }
+.gallery-item .gallery-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,.6));
+  color: white; font-size: .78rem; font-weight: 600;
+  padding: 20px 12px 10px;
+}
+
+/* 비급여 테이블 */
+.fees-section-title {
+  font-size: 1.1rem; font-weight: 700; color: var(--primary);
+  background: var(--primary-light); padding: 12px 20px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-left: 4px solid var(--primary);
+  margin-top: 36px; margin-bottom: 0;
+}
+.fees-table {
+  width: 100%; border-collapse: collapse;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 8px;
+}
+.fees-table thead { background: var(--primary); color: white; }
+.fees-table th { padding: 13px 18px; font-size: .85rem; font-weight: 700; text-align: left; }
+.fees-table td { padding: 12px 18px; font-size: .85rem; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+.fees-table tbody tr:nth-child(even) { background: var(--gray-50); }
+.fees-table tbody tr:hover { background: var(--primary-light); }
+.fees-table .price { font-weight: 700; color: var(--primary); text-align: right; white-space: nowrap; }
+
+/* 프리미엄 배너 */
+.premium-banner {
+  background: var(--grad-navy); border-radius: var(--radius-xl);
+  padding: 44px 48px; display: flex; gap: 32px; align-items: center;
+  margin-bottom: 56px; box-shadow: var(--shadow-xl);
+}
+.pb-icon { font-size: 3.5rem; flex-shrink: 0; }
+.pb-text h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.7rem; font-weight: 700; color: white; margin-bottom: 10px;
+}
+.pb-text p { font-size: .93rem; color: rgba(255,255,255,.72); line-height: 1.85; }
+
+/* 웰빙 카드 */
+.wellness-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.wellness-card {
+  background: var(--white); border-radius: var(--radius-xl);
+  overflow: hidden; box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100); transition: var(--transition);
+}
+.wellness-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+.wellness-card-header {
+  padding: 28px 24px 22px; text-align: center;
+}
+.wellness-card:nth-child(1) .wellness-card-header { background: linear-gradient(135deg,#0B3D8F,#0891B2); }
+.wellness-card:nth-child(2) .wellness-card-header { background: linear-gradient(135deg,#065F46,#0891B2); }
+.wellness-card:nth-child(3) .wellness-card-header { background: linear-gradient(135deg,#1B3A6B,#5B21B6); }
+.wellness-card-header i { font-size: 2.5rem; color: white; margin-bottom: 12px; }
+.wellness-card-header h3 { font-size: 1.2rem; font-weight: 800; color: white; }
+.wellness-card-body { padding: 24px; }
+.wellness-card-body p { font-size: .88rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+.wellness-items { display: flex; flex-wrap: wrap; gap: 7px; }
+.wellness-item {
+  font-size: .78rem; color: var(--primary); background: var(--primary-light);
+  padding: 5px 12px; border-radius: 100px; font-weight: 600;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .doctor-detail-grid { grid-template-columns: 1fr; }
+  .disease-grid { grid-template-columns: repeat(2,1fr); }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .wellness-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .page-hero { margin-top: 72px; padding: 48px 0 40px; }
+  .content-grid { grid-template-columns: 1fr; gap: 32px; }
+  .content-grid.reverse { direction: ltr; }
+  .sub-section { padding: 60px 0; }
+  .premium-banner { flex-direction: column; gap: 16px; padding: 28px 24px; }
+  .ddc-top { flex-direction: column; }
+  .ddc-photo { width: 100%; height: 180px; }
+}
+@media (max-width: 480px) {
+  .disease-grid, .wellness-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+/* ===== 아이콘 그래픽 비주얼 (사진 대체) ===== */
+.icon-visual {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl);
+}
+.icon-visual .iv-main {
+  font-size: 7rem;
+  color: rgba(255,255,255,0.95);
+  z-index: 2;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+}
+.icon-visual .iv-deco {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+.icon-visual .iv-deco-1 { width: 220px; height: 220px; top: -50px; right: -40px; }
+.icon-visual .iv-deco-2 { width: 150px; height: 150px; bottom: -30px; left: -30px; }
+.icon-visual .iv-deco-3 { width: 90px; height: 90px; top: 40px; left: 50px; background: rgba(255,255,255,0.06); }
+.icon-visual .iv-float {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  width: 56px; height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.9);
+  z-index: 3;
+}
+.icon-visual .iv-float-1 { top: 60px; right: 60px; animation: ivfloat 5s ease-in-out infinite; }
+.icon-visual .iv-float-2 { bottom: 70px; right: 90px; animation: ivfloat 6s ease-in-out infinite reverse; }
+.icon-visual .iv-float-3 { bottom: 100px; left: 70px; animation: ivfloat 4.5s ease-in-out infinite; }
+@keyframes ivfloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
