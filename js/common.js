@@ -53,9 +53,12 @@
           </li>
           <li><a href="${pagesBase}outpatient.html">외래진료 <i class="fa-solid fa-chevron-down"></i></a>
             <ul class="dropdown">
-              <li><a href="${pagesBase}outpatient.html"><i class="fa-solid fa-star"></i> 프리미엄 주치의</a></li>
-              <li><a href="${pagesBase}outpatient.html#kidney"><i class="fa-solid fa-kidneys"></i> 신장내과</a></li>
-              <li><a href="${pagesBase}outpatient.html#internal"><i class="fa-solid fa-stethoscope"></i> 내분비·심혈관·소화기</a></li>
+              <li><a href="${pagesBase}outpatient.html#premium"><i class="fa-solid fa-star"></i> 프리미엄 주치의</a></li>
+              <li><a href="${pagesBase}outpatient.html#dialysis"><i class="fa-solid fa-heart-pulse"></i> 혈액투석</a></li>
+              <li><a href="${pagesBase}outpatient.html#kidney"><i class="fa-solid fa-droplet"></i> 신장질환</a></li>
+              <li><a href="${pagesBase}outpatient.html#chronic"><i class="fa-solid fa-heart"></i> 만성질환</a></li>
+              <li><a href="${pagesBase}outpatient.html#thyroid"><i class="fa-solid fa-disease"></i> 갑상선·내분비</a></li>
+              <li><a href="${pagesBase}outpatient.html#acute"><i class="fa-solid fa-stethoscope"></i> 일반진료</a></li>
             </ul>
           </li>
           <li><a href="${pagesBase}checkup.html">건강검진 <i class="fa-solid fa-chevron-down"></i></a>
