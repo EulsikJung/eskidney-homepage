@@ -757,6 +757,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 @media(max-width:768px){
   .container{padding:0 20px}
   .header-top-info{display:none}
+  .header-cta{display:none}
+  .hamburger{display:flex;margin-left:auto}
   #hero{margin-top:72px}
   .hero-title{font-size:1.9rem}
   .hero-desc{font-size:.88rem}
