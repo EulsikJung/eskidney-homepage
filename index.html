@@ -829,50 +829,17 @@
 
 <!-- ══════════════════ 휴무 공지 팝업 (제헌절 7/17) ══════════════════ -->
 <div id="holidayPopup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
-  <div style="position:relative; width:100%; max-width:520px; background:#fff; border-radius:24px; box-shadow:0 24px 70px rgba(0,0,0,.3); overflow:hidden;">
-    <!-- 닫기 -->
-    <button id="hpClose" aria-label="닫기" style="position:absolute; top:16px; right:16px; width:36px; height:36px; border-radius:50%; background:rgba(0,0,0,.05); color:#334155; font-size:1.3rem; line-height:1; cursor:pointer; z-index:2;">&times;</button>
+  <div style="position:relative; width:100%; max-width:560px; background:#fff; border-radius:20px; box-shadow:0 24px 70px rgba(0,0,0,.3); overflow:hidden;">
+    <!-- 이미지 위 실제 닫기 버튼 (그림 X 위치) -->
+    <button id="hpClose" aria-label="닫기" style="position:absolute; top:10px; right:10px; width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,.01); color:transparent; cursor:pointer; z-index:2;">&times;</button>
 
-    <div style="padding:36px 32px 0;">
-      <!-- 상단 안내 -->
-      <p style="text-align:center; font-size:.95rem; font-weight:700; color:var(--primary); margin-bottom:8px;">· 올해부터 공휴일로 지정되었습니다! ·</p>
-      <!-- 날짜 -->
-      <div style="text-align:center; margin-bottom:6px;">
-        <span style="font-family:'Noto Serif KR',serif; font-size:2.4rem; font-weight:800; color:var(--primary); vertical-align:middle;">7월 17일</span>
-        <span style="display:inline-block; background:var(--primary); color:#fff; font-size:.85rem; font-weight:700; padding:5px 14px; border-radius:100px; margin-left:8px; vertical-align:middle;">금요일</span>
-      </div>
-      <h2 style="text-align:center; font-family:'Noto Serif KR',serif; font-size:2.8rem; font-weight:800; color:var(--primary); margin:0 0 24px; letter-spacing:-.02em;">🌺 제헌절 🌺</h2>
-    </div>
-
-    <div style="padding:0 28px 12px;">
-      <!-- 외래 휴무 -->
-      <div style="display:flex; align-items:stretch; border-radius:14px; overflow:hidden; margin-bottom:12px; box-shadow:0 2px 10px rgba(0,0,0,.06);">
-        <div style="background:var(--primary); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:16px 20px; min-width:130px;">
-          <i class="fa-solid fa-stethoscope" style="font-size:1.6rem; margin-bottom:6px;"></i>
-          <span style="font-size:1.05rem; font-weight:800;">외래 <span style="color:#FF6B6B;">휴무</span></span>
-        </div>
-        <div style="flex:1; display:flex; align-items:center; padding:14px 18px; background:#f8fafc; font-size:.92rem; color:#334155; line-height:1.6;">
-          제헌절(7/17, 금)은 공휴일로,<br>외래 진료는 <strong style="color:#E53935;">휴무</strong>입니다.
-        </div>
-      </div>
-      <!-- 인공신장실 정상영업 -->
-      <div style="display:flex; align-items:stretch; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.06);">
-        <div style="background:#1B7A43; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:16px 20px; min-width:130px;">
-          <i class="fa-solid fa-heart-pulse" style="font-size:1.6rem; margin-bottom:6px;"></i>
-          <span style="font-size:.95rem; font-weight:800; text-align:center; line-height:1.3;">인공신장실<br>정상영업</span>
-        </div>
-        <div style="flex:1; display:flex; align-items:center; padding:14px 18px; background:#f2f9f4; font-size:.92rem; color:#334155; line-height:1.6;">
-          인공신장실은<br><strong style="color:#1B7A43;">정상영업</strong>합니다.
-        </div>
-      </div>
-    </div>
-
-    <p style="text-align:center; font-size:.9rem; color:var(--primary); font-weight:600; padding:16px 20px 8px;">— 진료 및 예약에 참고해 주세요. 감사합니다. —</p>
+    <!-- 팝업 이미지 -->
+    <img src="pictures/0717popup.png" alt="제헌절(7/17) 외래 휴무 안내 - 인공신장실 정상영업" style="width:100%; display:block;">
 
     <!-- 하단 버튼 -->
     <div style="display:flex; border-top:1px solid #eef2f7;">
-      <button id="hpTodayClose" style="flex:1; padding:16px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
-      <button id="hpConfirm" style="flex:1; padding:16px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer;">닫기</button>
+      <button id="hpTodayClose" style="flex:1; padding:15px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
+      <button id="hpConfirm" style="flex:1; padding:15px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer;">닫기</button>
     </div>
   </div>
 </div>
