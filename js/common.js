@@ -28,11 +28,7 @@
   <div class="header-main">
     <div class="container">
       <a href="${base}index.html" class="logo">
-        <div class="logo-icon">J</div>
-        <div class="logo-text">
-          <div class="name">정을식내과의원</div>
-          <div class="sub">인공신장실 · 내과 · 건강검진</div>
-        </div>
+        <img src="${base}pictures/logo.png" alt="정을식내과 인공신장실" class="logo-img" style="height:48px;width:auto;display:block;">
       </a>
       <nav>
         <ul class="nav">
@@ -92,8 +88,7 @@
 <div class="mobile-nav">
   <div class="mobile-nav-head">
     <a href="${base}index.html" class="logo">
-      <div class="logo-icon">J</div>
-      <div class="logo-text"><div class="name">정을식내과의원</div></div>
+      <img src="${base}pictures/logo.png" alt="정을식내과 인공신장실" class="logo-img" style="height:48px;width:auto;display:block;">
     </a>
     <button class="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button>
   </div>
@@ -149,7 +144,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">
-        <div class="name">정을식내과의원</div>
+        <img src="${base}pictures/logo_white.png" alt="정을식내과 인공신장실" class="logo-img-white" style="height:46px;width:auto;display:block;margin-bottom:14px;">
         <div class="info">
           대표자: 정을식 &nbsp;|&nbsp; 사업자등록번호: 601-93-12204<br/>
           인천광역시 남동구 남동대로 931 갤럭시타워 2층<br/>
