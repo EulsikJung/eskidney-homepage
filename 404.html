@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>페이지를 찾을 수 없습니다 | 정을식내과의원</title>
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root{ --primary:#0B3D8F; --teal:#0891B2; --gray-900:#111827; --gray-700:#374151; --gray-500:#6B7280; --gray-100:#F3F4F6; --gray-50:#F9FAFB; }
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    body{ font-family:'Noto Sans KR',sans-serif; color:var(--gray-900); background:linear-gradient(135deg,#EBF3FF,#E0F7FA); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+    .wrap{ max-width:640px; width:100%; background:#fff; border-radius:24px; box-shadow:0 20px 60px rgba(11,61,143,.12); padding:56px 40px; text-align:center; }
+    .logo{ display:inline-flex; align-items:center; gap:12px; margin-bottom:32px; text-decoration:none; }
+    .logo .ic{ width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; font-weight:900; font-size:1.5rem; display:flex; align-items:center; justify-content:center; }
+    .logo .nm{ font-family:'Noto Serif KR',serif; font-weight:700; font-size:1.25rem; color:var(--primary); }
+    .code{ font-size:4.5rem; font-weight:900; color:var(--primary); line-height:1; letter-spacing:-2px; }
+    h1{ font-family:'Noto Serif KR',serif; font-size:1.5rem; color:var(--gray-900); margin:18px 0 12px; }
+    p{ font-size:1rem; color:var(--gray-700); line-height:1.8; margin-bottom:8px; }
+    .note{ font-size:.88rem; color:var(--gray-500); margin-top:6px; }
+    .links{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:32px 0 8px; }
+    .links a{ display:flex; align-items:center; gap:10px; padding:15px 18px; border:1.5px solid var(--gray-100); border-radius:14px; text-decoration:none; color:var(--gray-900); font-weight:700; font-size:.95rem; transition:all .25s; background:var(--gray-50); }
+    .links a:hover{ border-color:var(--primary); color:var(--primary); transform:translateY(-2px); }
+    .links a i{ color:var(--primary); font-size:1.1rem; }
+    .home{ display:inline-flex; align-items:center; gap:8px; margin-top:24px; padding:14px 28px; background:var(--primary); color:#fff; border-radius:100px; text-decoration:none; font-weight:700; transition:all .25s; }
+    .home:hover{ background:#082e6b; }
+    .cta{ margin-top:28px; padding-top:24px; border-top:1px solid var(--gray-100); }
+    .cta a{ color:var(--primary); font-weight:700; text-decoration:none; }
+    @media(max-width:520px){ .wrap{ padding:40px 24px; } .links{ grid-template-columns:1fr; } .code{ font-size:3.5rem; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="/index.html" class="logo">
+      <span class="ic">J</span>
+      <span class="nm">정을식내과의원</span>
+    </a>
+    <div class="code">404</div>
+    <h1>찾으시는 페이지가 없습니다</h1>
+    <p>주소가 바뀌었거나 삭제된 페이지일 수 있습니다.</p>
+    <p class="note">홈페이지가 새롭게 개편되었습니다. 아래에서 원하시는 정보를 찾아보세요.</p>
+
+    <div class="links">
+      <a href="/pages/dialysis.html"><i class="fa-solid fa-heart-pulse"></i> 인공신장실(혈액투석)</a>
+      <a href="/pages/outpatient.html"><i class="fa-solid fa-stethoscope"></i> 외래진료</a>
+      <a href="/pages/checkup.html"><i class="fa-solid fa-clipboard-check"></i> 건강검진</a>
+      <a href="/pages/contact.html"><i class="fa-solid fa-map-location-dot"></i> 오시는길·진료시간</a>
+      <a href="/pages/doctors.html"><i class="fa-solid fa-user-doctor"></i> 의료진 소개</a>
+      <a href="/pages/faq.html"><i class="fa-solid fa-circle-question"></i> 자주 묻는 질문</a>
+    </div>
+
+    <a href="/index.html" class="home"><i class="fa-solid fa-house"></i> 홈으로 가기</a>
+
+    <div class="cta">
+      <p>궁금한 점은 언제든 문의해 주세요 &nbsp;·&nbsp; <a href="tel:032-426-2301"><i class="fa-solid fa-phone"></i> 032-426-2301</a></p>
+    </div>
+  </div>
+
+  <script>
+    /* 구 홈페이지 주소 유형에 따라 관련 페이지를 자동 안내 */
+    (function(){
+      var path = (location.pathname + location.search).toLowerCase();
+      var map = [
+        [/dialy|투석|sinjang|kidney|artificial/, '/pages/dialysis.html'],
+        [/checkup|검진|health|geon/, '/pages/checkup.html'],
+        [/doctor|team|의료진|원장|staff/, '/pages/doctors.html'],
+        [/contact|오시|location|map|찾아/, '/pages/contact.html'],
+        [/about|인사말|소개|greeting/, '/pages/about.html'],
+        [/gallery|시설|둘러/, '/pages/gallery.html'],
+        [/outpatient|외래|진료/, '/pages/outpatient.html']
+      ];
+      for (var i=0;i<map.length;i++){
+        if (map[i][0].test(path)) {
+          var hint = document.createElement('p');
+          hint.className = 'note';
+          hint.style.marginTop = '14px';
+          hint.innerHTML = '혹시 이 페이지를 찾으셨나요? <a href="'+map[i][1]+'" style="color:var(--primary);font-weight:700;">바로가기 →</a>';
+          document.querySelector('.links').insertAdjacentElement('beforebegin', hint);
+          break;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
