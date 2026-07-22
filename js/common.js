@@ -56,6 +56,7 @@
               <li><a href="${pagesBase}outpatient.html#kidney"><i class="fa-solid fa-droplet"></i> 신장질환</a></li>
               <li><a href="${pagesBase}outpatient.html#chronic"><i class="fa-solid fa-heart"></i> 만성질환</a></li>
               <li><a href="${pagesBase}outpatient.html#thyroid"><i class="fa-solid fa-disease"></i> 갑상선·내분비</a></li>
+              <li><a href="${pagesBase}outpatient.html#digest"><i class="fa-solid fa-magnifying-glass"></i> 소화기·내시경</a></li>
               <li><a href="${pagesBase}outpatient.html#acute"><i class="fa-solid fa-stethoscope"></i> 일반진료</a></li>
             </ul>
           </li>
