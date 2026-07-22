@@ -39,11 +39,30 @@
     "addressRegion": "인천광역시",
     "addressCountry": "KR"
   },
-  "medicalSpecialty": ["Nephrology", "InternalMedicine", "PrimaryCare"],
+  "medicalSpecialty": ["Nephrology", "InternalMedicine", "PrimaryCare", "Gastroenterologic"],
+  "areaServed": [
+    {"@type": "Place", "name": "인천광역시 남동구 간석동"},
+    {"@type": "Place", "name": "간석오거리"}
+  ],
+  "founder": {
+    "@type": "Physician",
+    "name": "정을식",
+    "medicalSpecialty": "Nephrology",
+    "jobTitle": "대표원장 · 신장내과 전문의"
+  },
+  "employee": [
+    {"@type": "Physician", "name": "정을식", "jobTitle": "대표원장", "medicalSpecialty": "Nephrology"},
+    {"@type": "Physician", "name": "김미정", "jobTitle": "원장", "medicalSpecialty": "Nephrology"},
+    {"@type": "Physician", "name": "권규흠", "jobTitle": "원장", "medicalSpecialty": "InternalMedicine"},
+    {"@type": "Physician", "name": "신하전", "jobTitle": "원장", "medicalSpecialty": "PrimaryCare"}
+  ],
   "availableService": [
-    {"@type": "MedicalProcedure", "name": "혈액투석"},
-    {"@type": "MedicalProcedure", "name": "건강검진"},
-    {"@type": "MedicalProcedure", "name": "위·대장내시경"}
+    {"@type": "MedicalProcedure", "name": "인공신장실 혈액투석"},
+    {"@type": "MedicalProcedure", "name": "수면(진정) 위내시경"},
+    {"@type": "MedicalProcedure", "name": "수면(진정) 대장내시경"},
+    {"@type": "MedicalProcedure", "name": "국가건강검진·암검진"},
+    {"@type": "MedicalProcedure", "name": "신장질환(만성콩팥병·단백뇨·혈뇨) 진료"},
+    {"@type": "MedicalProcedure", "name": "만성질환(고혈압·당뇨·고지혈증) 관리"}
   ],
   "openingHoursSpecification": [
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Friday"], "opens": "08:30", "closes": "20:00"},
