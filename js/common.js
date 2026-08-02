@@ -17,6 +17,7 @@
         <span><i class="fa-regular fa-clock"></i> 월수금 08:30–20:00 &nbsp;|&nbsp; 화목 08:30–19:00 &nbsp;|&nbsp; 토 08:30–13:00</span>
       </div>
       <div class="header-top-sns">
+        <span class="lang-switch" style="display:inline-flex;gap:2px;align-items:center;margin-right:10px;"><a href="${base}index.html" style="font-size:.72rem;font-weight:700;color:#fff;background:rgba(255,255,255,.22);padding:3px 7px;border-radius:6px;text-decoration:none;">KO</a><a href="${base}en/index.html" style="font-size:.72rem;font-weight:700;color:rgba(255,255,255,.8);padding:3px 7px;border-radius:6px;text-decoration:none;">EN</a><a href="${base}zh/index.html" style="font-size:.72rem;font-weight:700;color:rgba(255,255,255,.8);padding:3px 7px;border-radius:6px;text-decoration:none;">中文</a></span>
         <a href="https://naver.me/IgJLOB2k" target="_blank" title="네이버 플레이스"><i class="fa-solid fa-location-dot"></i></a>
         <a href="https://blog.naver.com/eskidney" target="_blank"><i class="fa-solid fa-blog"></i></a>
         <a href="https://www.youtube.com/channel/UCp_n-tM8PCBB4RYk8d2u_cQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>

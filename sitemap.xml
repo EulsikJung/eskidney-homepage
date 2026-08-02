@@ -28,4 +28,10 @@
   <url><loc>https://eskidney.co.kr/pages/column-good-dialysis.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://eskidney.co.kr/pages/column-recovery-time.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://eskidney.co.kr/pages/column-homeostasis.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eskidney.co.kr/en/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eskidney.co.kr/en/dialysis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eskidney.co.kr/en/checkup.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eskidney.co.kr/zh/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eskidney.co.kr/zh/dialysis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://eskidney.co.kr/zh/checkup.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
