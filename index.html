@@ -570,7 +570,7 @@
             <span class="doctor-tag">내분비</span>
             <span class="doctor-tag">심혈관</span>
           </div>
-          <div class="btn-video-disabled"><i class="fa-solid fa-video"></i> 소개 영상 준비중</div>
+          <button class="btn-video" data-video="gDXwIOY3WSE"><i class="fa-brands fa-youtube"></i> 의사 소개 영상 보기</button>
         </div>
       </div>
 
@@ -913,6 +913,68 @@
   <a href="http://pf.kakao.com/_khLJT" target="_blank" class="mbb-btn kakao"><i class="fa-solid fa-comment"></i>카카오</a>
   <a href="pages/contact.html" class="mbb-btn"><i class="fa-solid fa-map-location-dot"></i>오시는길</a>
 </div>
+
+<!-- ══════════════════ 광복절 연휴 진료 안내 팝업 ══════════════════ -->
+<div id="holidayPopup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
+  <div style="position:relative; width:100%; max-width:440px; background:#fff; border-radius:20px; box-shadow:0 24px 70px rgba(0,0,0,.3); overflow:hidden;">
+    <div style="background:var(--primary); color:#fff; padding:24px 26px 20px; text-align:center;">
+      <div style="font-size:.8rem; font-weight:700; letter-spacing:.08em; opacity:.85; margin-bottom:6px;">🇰🇷 광복절 연휴 진료 안내</div>
+      <div style="font-family:'Noto Serif KR',serif; font-size:1.4rem; font-weight:700;">외래진료 휴무 안내</div>
+    </div>
+    <div style="padding:26px;">
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
+        <div style="display:flex; align-items:center; gap:12px; background:#FBE9E7; border-radius:12px; padding:14px 16px;">
+          <i class="fa-solid fa-calendar-xmark" style="color:#D84315; font-size:1.2rem;"></i>
+          <div>
+            <div style="font-weight:800; color:#4E342E; font-size:.98rem;">8월 15일(토) 광복절</div>
+            <div style="font-size:.85rem; color:#8D6E63;">외래진료 휴무</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:#FBE9E7; border-radius:12px; padding:14px 16px;">
+          <i class="fa-solid fa-calendar-xmark" style="color:#D84315; font-size:1.2rem;"></i>
+          <div>
+            <div style="font-weight:800; color:#4E342E; font-size:.98rem;">8월 17일(월) 대체공휴일</div>
+            <div style="font-size:.85rem; color:#8D6E63;">외래진료 휴무</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:#E8F5E9; border-radius:12px; padding:14px 16px;">
+          <i class="fa-solid fa-circle-check" style="color:#2E7D32; font-size:1.2rem;"></i>
+          <div>
+            <div style="font-weight:800; color:#1B5E20; font-size:.98rem;">인공신장실(혈액투석)</div>
+            <div style="font-size:.85rem; color:#388E3C;">정상 운영합니다</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.85rem; color:var(--gray-500); text-align:center; line-height:1.7; margin-bottom:4px;">
+        투석 일정 문의는 <a href="tel:032-426-2301" style="color:var(--primary); font-weight:700;">032-426-2301</a>로 연락 주세요.
+      </p>
+    </div>
+    <div style="display:flex; border-top:1px solid #eef2f7;">
+      <button id="hpTodayClose" style="flex:1; padding:15px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
+      <button id="hpConfirm" style="flex:1; padding:15px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer;">닫기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var popup = document.getElementById('holidayPopup');
+  if(!popup) return;
+  // 8/18 이후에는 자동으로 안 뜸
+  if(new Date() >= new Date(2026, 7, 18, 0, 0, 0)) return;
+  var todayKey = new Date().toDateString();
+  try { if(localStorage.getItem('hp_holiday_0815') === todayKey) return; } catch(e){}
+  popup.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  function close(){ popup.style.display='none'; document.body.style.overflow=''; }
+  document.getElementById('hpConfirm').onclick = close;
+  document.getElementById('hpTodayClose').onclick = function(){
+    try { localStorage.setItem('hp_holiday_0815', todayKey); } catch(e){}
+    close();
+  };
+  popup.addEventListener('click', function(e){ if(e.target === popup) close(); });
+})();
+</script>
 
 <script src="js/main.js?v=4"></script>
 </body>
