@@ -91,8 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 로컬(file://) 환경 여부 감지
   const isLocal = location.protocol === 'file:';
 
-  document.querySelectorAll('.btn-video, .doctor-video-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+  document.querySelectorAll('.btn-video, .btn-video-full, .doctor-video-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const videoId = btn.dataset.video;
       if (!videoId) return;
 
