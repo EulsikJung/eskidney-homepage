@@ -916,51 +916,14 @@
 
 <!-- ══════════════════ 광복절 연휴 진료 안내 팝업 ══════════════════ -->
 <div id="holidayPopup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
-  <div style="position:relative; width:100%; max-width:440px; background:#fff; border-radius:20px; box-shadow:0 24px 70px rgba(0,0,0,.3); overflow:hidden;">
-    <div style="position:relative; background:linear-gradient(155deg,#143667,#0a1f3d); padding:32px 26px 26px; text-align:center; overflow:hidden;">
-      <div style="position:absolute; inset:0; background:repeating-conic-gradient(from 0deg at 50% 38%, rgba(255,255,255,.06) 0deg 5deg, transparent 5deg 11deg);"></div>
-      <div style="position:absolute; left:0; right:0; bottom:0; height:5px; background:linear-gradient(90deg,#CD2E3A 0 33%,#fff 33% 66%,#0047A0 66% 100%);"></div>
-      <svg width="54" height="54" viewBox="0 0 100 100" style="position:relative; margin-bottom:12px; filter:drop-shadow(0 3px 8px rgba(0,0,0,.35));">
-        <circle cx="50" cy="50" r="49" fill="#fff"/>
-        <g transform="rotate(33 50 50)">
-          <path d="M50 1 A49 49 0 0 1 50 99 A24.5 24.5 0 0 1 50 50 A24.5 24.5 0 0 0 50 1 Z" fill="#CD2E3A"/>
-          <path d="M50 1 A49 49 0 0 0 50 99 A24.5 24.5 0 0 0 50 50 A24.5 24.5 0 0 1 50 1 Z" fill="#0047A0"/>
-        </g>
-      </svg>
-      <div style="position:relative; font-family:'Noto Serif KR',serif; color:#fff; font-size:1.55rem; font-weight:700; letter-spacing:.02em;">8·15 광복절</div>
-      <div style="position:relative; color:rgba(255,255,255,.72); font-size:.78rem; margin-top:5px; letter-spacing:.14em;">외래진료 휴무 안내</div>
-    </div>
-    <div style="padding:26px;">
-      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
-        <div style="display:flex; align-items:center; gap:12px; background:#FBE9E7; border-radius:12px; padding:14px 16px;">
-          <i class="fa-solid fa-calendar-xmark" style="color:#D84315; font-size:1.2rem;"></i>
-          <div>
-            <div style="font-weight:800; color:#4E342E; font-size:.98rem;">8월 15일(토) 광복절</div>
-            <div style="font-size:.85rem; color:#8D6E63;">외래진료 휴무</div>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px; background:#FBE9E7; border-radius:12px; padding:14px 16px;">
-          <i class="fa-solid fa-calendar-xmark" style="color:#D84315; font-size:1.2rem;"></i>
-          <div>
-            <div style="font-weight:800; color:#4E342E; font-size:.98rem;">8월 17일(월) 대체공휴일</div>
-            <div style="font-size:.85rem; color:#8D6E63;">외래진료 휴무</div>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px; background:#E8F5E9; border-radius:12px; padding:14px 16px;">
-          <i class="fa-solid fa-circle-check" style="color:#2E7D32; font-size:1.2rem;"></i>
-          <div>
-            <div style="font-weight:800; color:#1B5E20; font-size:.98rem;">인공신장실(혈액투석)</div>
-            <div style="font-size:.85rem; color:#388E3C;">정상 운영합니다</div>
-          </div>
-        </div>
+  <div style="position:relative; width:100%; max-width:720px;">
+    <button id="hpClose" aria-label="닫기" style="position:absolute; top:-14px; right:-14px; width:40px; height:40px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.3rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
+    <div style="background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 24px 70px rgba(0,0,0,.35);">
+      <img src="pictures/20260815_banner.png?v=1" alt="8월 15일(토)·17일(월) 광복절·대체공휴일 외래진료 휴무, 인공신장실 정상운영 안내" style="width:100%; display:block;">
+      <div style="display:flex; border-top:1px solid #eef2f7;">
+        <button id="hpTodayClose" style="flex:1; padding:14px; background:#f8fafc; color:#64748b; font-size:.88rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
+        <button id="hpConfirm" style="flex:1; padding:14px; background:#fff; color:var(--primary); font-size:.88rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
       </div>
-      <p style="font-size:.85rem; color:var(--gray-500); text-align:center; line-height:1.7; margin-bottom:4px;">
-        투석 일정 문의는 <a href="tel:032-426-2301" style="color:var(--primary); font-weight:700;">032-426-2301</a>로 연락 주세요.
-      </p>
-    </div>
-    <div style="display:flex; border-top:1px solid #eef2f7;">
-      <button id="hpTodayClose" style="flex:1; padding:15px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
-      <button id="hpConfirm" style="flex:1; padding:15px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer;">닫기</button>
     </div>
   </div>
 </div>
@@ -977,6 +940,7 @@
   document.body.style.overflow = 'hidden';
   function close(){ popup.style.display='none'; document.body.style.overflow=''; }
   document.getElementById('hpConfirm').onclick = close;
+  document.getElementById('hpClose').onclick = close;
   document.getElementById('hpTodayClose').onclick = function(){
     try { localStorage.setItem('hp_holiday_0815', todayKey); } catch(e){}
     close();
