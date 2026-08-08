@@ -81,9 +81,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 /* 페이드업 애니메이션 */
 .fade-up{
-  opacity:0;transform:translateY(36px);
   transition:opacity .7s cubic-bezier(0.4,0,0.2,1),transform .7s cubic-bezier(0.4,0,0.2,1);
 }
+/* 숨김은 JS가 살아있을 때(html.js)만 — JS 꺼짐/실패 시 fade-up 기본 '보임'(폴백) */
+html.js .fade-up{opacity:0;transform:translateY(36px)}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 .fade-up:nth-child(2){transition-delay:.1s}
 .fade-up:nth-child(3){transition-delay:.2s}
