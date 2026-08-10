@@ -686,7 +686,9 @@ html.js .fade-up:not(.visible){opacity:0;transform:translateY(36px)}
   box-shadow:0 4px 16px rgba(0,0,0,.2);
 }
 .float-btn:hover{transform:scale(1.12)}
-.float-btn.kakao{background:#FEE500;color:#3A1D1D}
+.float-btn.kakao{background:#FEE500;color:#3A1D1D;animation:kakaoPulse 2.6s ease-in-out infinite}
+@keyframes kakaoPulse{0%,100%{box-shadow:0 4px 16px rgba(0,0,0,.2)}50%{box-shadow:0 4px 16px rgba(0,0,0,.2),0 0 0 9px rgba(254,229,0,.30)}}
+@media (prefers-reduced-motion:reduce){.float-btn.kakao{animation:none}}
 .float-btn.phone{background:var(--primary);color:white;box-shadow:0 4px 16px rgba(11,61,143,.4)}
 .float-btn.top{
   background:white;color:var(--gray-500);

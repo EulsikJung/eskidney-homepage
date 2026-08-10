@@ -4,6 +4,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── 0. 카톡 1:1 상담 플로팅 버튼 자동 삽입 (버튼 없는 페이지에) ── */
+  if (!document.querySelector('.floats')) {
+    const lang = (document.documentElement.lang || 'ko').toLowerCase();
+    const isEn = lang.indexOf('en') === 0;
+    const isZh = lang.indexOf('zh') === 0;
+    const kakaoTitle = isEn ? 'KakaoTalk 1:1 chat' : (isZh ? 'KakaoTalk 1:1 咨询' : '카카오톡 1:1 상담');
+    const phoneTitle = isEn ? 'Call us' : (isZh ? '电话咨询' : '전화 문의');
+    const topTitle = isEn ? 'Back to top' : (isZh ? '返回顶部' : '맨 위로');
+    const floats = document.createElement('div');
+    floats.className = 'floats';
+    floats.innerHTML =
+      '<a href="http://pf.kakao.com/_khLJT" target="_blank" rel="noopener" class="float-btn kakao" title="' + kakaoTitle + '"><i class="fa-solid fa-comment"></i></a>' +
+      '<a href="tel:032-426-2301" class="float-btn phone" title="' + phoneTitle + '"><i class="fa-solid fa-phone"></i></a>' +
+      '<button class="float-btn top" title="' + topTitle + '"><i class="fa-solid fa-chevron-up"></i></button>';
+    document.body.appendChild(floats);
+  }
+
   /* ── 1. 헤더 스크롤 효과 ── */
   const header = document.getElementById('header');
   const topBtn = document.querySelector('.float-btn.top');
