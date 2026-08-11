@@ -47,7 +47,7 @@
             <ul class="dropdown">
               <li><a href="${pagesBase}dialysis.html"><i class="fa-solid fa-heart-pulse"></i> 혈액투석이란</a></li>
               <li><a href="${pagesBase}dialysis.html#facility"><i class="fa-solid fa-bed"></i> 투석실 시설</a></li>
-              <li><a href="${pagesBase}dialysis.html#isolation"><i class="fa-solid fa-shield-halved"></i> 격리투석실</a></li>
+              <li><a href="${pagesBase}dialysis.html#vascular"><i class="fa-solid fa-wave-square"></i> 투석혈관 관리</a></li>
               <li><a href="${pagesBase}column.html"><i class="fa-solid fa-pen-nib"></i> 신장내과 건강칼럼</a></li>
             </ul>
           </li>
@@ -109,7 +109,7 @@
       <ul class="mobile-sub">
         <li><a href="${pagesBase}dialysis.html">혈액투석이란</a></li>
         <li><a href="${pagesBase}dialysis.html#facility">투석실 시설</a></li>
-        <li><a href="${pagesBase}dialysis.html#isolation">격리투석실</a></li>
+        <li><a href="${pagesBase}dialysis.html#vascular">투석혈관 관리</a></li>
         <li><a href="${pagesBase}column.html">신장내과 건강칼럼</a></li>
       </ul>
     </li>
