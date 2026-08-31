@@ -687,7 +687,7 @@
 
     <!-- R20 신규 초음파 하이라이트 -->
     <div class="r20-feature fade-up">
-      <div class="r20-photo"><img src="pictures/eq_r20.jpg" alt="삼성메디슨 R20 초음파 진단 시스템"></div>
+      <div class="r20-photo"><img src="pictures/eq_r20.jpg?v=2" alt="삼성메디슨 R20 초음파 진단 시스템"></div>
       <div class="r20-text">
         <span class="r20-badge">NEW · 새로 도입</span>
         <h3>삼성메디슨 R20<br>초음파 진단 시스템</h3>
@@ -736,7 +736,7 @@
 
     <div class="equipment-panel equip-grid-3" id="equip-imaging">
       <div class="equip-card fade-up">
-        <div class="equip-img" style="background:#000;"><img src="pictures/eq_r20.jpg" alt="Samsung Medison R20 초음파" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:12px;"></div>
+        <div class="equip-img" style="background:#000;"><img src="pictures/eq_r20.jpg?v=2" alt="Samsung Medison R20 초음파" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:12px;"></div>
         <div class="equip-info"><div class="maker">Samsung Medison</div><h4>R20 <span style="font-size:.7rem;font-weight:800;color:var(--primary);background:var(--primary-light);padding:2px 8px;border-radius:100px;vertical-align:middle;">NEW</span></h4><p>2025년 출시 신형 초음파를 새로 도입. 복부·갑상선·경동맥 등 정밀 검사.</p></div>
       </div>
       <div class="equip-card fade-up">
@@ -962,66 +962,71 @@
   <a href="pages/contact.html" class="mbb-btn"><i class="fa-solid fa-map-location-dot"></i>오시는길</a>
 </div>
 
-<!-- ══════════════════ 팝업 공지 (별개 2개) ══════════════════ -->
-<!-- 팝업 1: 추석 연휴 안내 -->
-<div id="chuseokPopup" class="notice-popup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
-  <div style="position:relative; width:100%; max-width:560px;">
-    <button class="pp-x" aria-label="닫기" style="position:absolute; top:-14px; right:-14px; width:40px; height:40px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.3rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
-    <div style="background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 24px 70px rgba(0,0,0,.35);">
-      <img src="pictures/chuseok.png?v=1" alt="9월 24일(목)~26일(토) 추석 연휴 외래진료 휴무, 인공신장실 정상 운영 안내" style="width:100%; display:block;">
-      <div style="display:flex; border-top:1px solid #eef2f7;">
-        <button class="pp-today" style="flex:1; padding:14px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
-        <button class="pp-close" style="flex:1; padding:14px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- ══════════════════ 팝업 공지 (2개 동시 표시, 별개 카드) ══════════════════ -->
+<div id="noticePopup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
+  <div style="width:100%; max-width:880px; max-height:92vh; overflow-y:auto;">
+    <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; align-items:flex-start;">
 
-<!-- 팝업 2: 최신 R20 초음파 도입 -->
-<div id="r20Popup" class="notice-popup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
-  <div style="position:relative; width:100%; max-width:540px;">
-    <button class="pp-x" aria-label="닫기" style="position:absolute; top:-14px; right:-14px; width:40px; height:40px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.3rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
-    <div style="border-radius:18px; overflow:hidden; box-shadow:0 24px 70px rgba(0,0,0,.35);">
-      <div style="background:#000;"><img src="pictures/r20_popup.jpg" alt="삼성메디슨 R20 초음파 장비" style="width:100%; display:block;"></div>
-      <div style="background:linear-gradient(135deg,#0B3D8F,#06214d); color:#fff; padding:22px 24px;">
-        <span style="display:inline-block; background:#7EC8E3; color:#06214d; font-size:.7rem; font-weight:800; letter-spacing:.08em; padding:3px 11px; border-radius:100px; margin-bottom:11px;">NEW</span>
-        <h3 style="font-size:1.35rem; font-weight:800; margin:0 0 8px;">최신 R20 초음파 도입</h3>
-        <p style="font-size:.92rem; color:rgba(255,255,255,.85); line-height:1.75; margin:0;">2025년 출시된 삼성메디슨 R20 초음파를 새로 도입했습니다. 복부·갑상선·경동맥 등 정밀 초음파 검사를 제공합니다.</p>
+      <!-- 추석 카드 -->
+      <div id="ppCardChuseok" style="position:relative; flex:0 1 400px; max-width:400px;">
+        <button class="pp-x" data-card="ppCardChuseok" aria-label="닫기" style="position:absolute; top:-12px; right:-12px; width:36px; height:36px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.2rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
+        <div style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.38);">
+          <img src="pictures/chuseok.png?v=1" alt="9월 24일(목)~26일(토) 추석 연휴 외래진료 휴무, 인공신장실 정상 운영 안내" style="width:100%; display:block;">
+        </div>
       </div>
-      <div style="display:flex; background:#06214d;">
-        <button class="pp-today" style="flex:1; padding:14px; background:rgba(255,255,255,.08); color:rgba(255,255,255,.75); font-size:.9rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid rgba(255,255,255,.12);">오늘 하루 보지 않기</button>
-        <button class="pp-close" style="flex:1; padding:14px; background:transparent; color:#fff; font-size:.9rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
+
+      <!-- R20 카드 (작게) -->
+      <div id="ppCardR20" style="position:relative; flex:0 1 300px; max-width:300px;">
+        <button class="pp-x" data-card="ppCardR20" aria-label="닫기" style="position:absolute; top:-12px; right:-12px; width:36px; height:36px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.2rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
+        <div style="border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.38);">
+          <div style="background:#000;"><img src="pictures/r20_popup.jpg?v=2" alt="삼성메디슨 R20 초음파 장비" style="width:100%; display:block;"></div>
+          <div style="background:linear-gradient(135deg,#0B3D8F,#06214d); color:#fff; padding:16px 18px;">
+            <span style="display:inline-block; background:#7EC8E3; color:#06214d; font-size:.66rem; font-weight:800; letter-spacing:.08em; padding:3px 10px; border-radius:100px; margin-bottom:9px;">NEW</span>
+            <h3 style="font-size:1.05rem; font-weight:800; margin:0 0 6px;">최신 R20 초음파 도입</h3>
+            <p style="font-size:.8rem; color:rgba(255,255,255,.85); line-height:1.7; margin:0;">2025년 출시된 삼성메디슨 R20 초음파를 새로 도입했습니다. 복부·갑상선·경동맥 등 정밀 초음파 검사를 제공합니다.</p>
+          </div>
+        </div>
       </div>
+
+    </div>
+
+    <!-- 공용 하단 버튼 -->
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <button id="ppTodayAll" style="padding:12px 22px; background:rgba(255,255,255,.14); color:#fff; font-size:.88rem; font-weight:600; cursor:pointer; border:1px solid rgba(255,255,255,.28); border-radius:100px;">오늘 하루 보지 않기</button>
+      <button id="ppCloseAll" style="padding:12px 26px; background:#fff; color:var(--primary); font-size:.88rem; font-weight:700; cursor:pointer; border:none; border-radius:100px;">닫기</button>
     </div>
   </div>
 </div>
 
 <script>
 (function(){
-  function setup(id, opts){
-    var pop = document.getElementById(id);
-    if(!pop) return { show: opts.onResolve || function(){} };
-    var todayKey = new Date().toDateString();
-    function dismissed(){ try { return localStorage.getItem(opts.key) === todayKey; } catch(e){ return false; } }
-    function hide(){ pop.style.display='none'; document.body.style.overflow=''; if(opts.onResolve) opts.onResolve(); }
-    pop.querySelector('.pp-close').onclick = hide;
-    pop.querySelector('.pp-x').onclick = hide;
-    pop.querySelector('.pp-today').onclick = function(){ try { localStorage.setItem(opts.key, todayKey); } catch(e){} hide(); };
-    pop.addEventListener('click', function(e){ if(e.target === pop) hide(); });
-    return { show:function(){
-      if((opts.expired && opts.expired()) || dismissed()){ if(opts.onResolve) opts.onResolve(); return; }
-      pop.style.display='flex'; document.body.style.overflow='hidden';
-    }};
-  }
-  // R20 팝업 (추석 팝업이 닫힌 뒤 표시)
-  var r20 = setup('r20Popup', { key:'pp_r20_v1' });
-  // 추석 팝업 (9/27부터 만료). 닫히면 R20 팝업 표시
-  var chuseok = setup('chuseokPopup', {
-    key:'pp_chuseok_v1',
-    expired:function(){ return new Date() >= new Date(2026, 8, 27, 0, 0, 0); },
-    onResolve:function(){ setTimeout(function(){ r20.show(); }, 220); }
+  var overlay = document.getElementById('noticePopup');
+  if(!overlay) return;
+  var todayKey = new Date().toDateString();
+  function seen(k){ try { return localStorage.getItem(k) === todayKey; } catch(e){ return false; } }
+  function mark(k){ try { localStorage.setItem(k, todayKey); } catch(e){} }
+  var chuseokExpired = new Date() >= new Date(2026, 8, 27, 0, 0, 0);
+  var cardC = document.getElementById('ppCardChuseok');
+  var cardR = document.getElementById('ppCardR20');
+  var showC = !chuseokExpired && !seen('pp_chuseok_v1');
+  var showR = !seen('pp_r20_v1');
+  if(cardC) cardC.style.display = showC ? '' : 'none';
+  if(cardR) cardR.style.display = showR ? '' : 'none';
+  if(!showC && !showR) return;
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  function closeAll(){ overlay.style.display='none'; document.body.style.overflow=''; }
+  overlay.querySelectorAll('.pp-x').forEach(function(b){
+    b.onclick = function(){
+      var card = document.getElementById(b.getAttribute('data-card'));
+      if(card) card.style.display = 'none';
+      var anyVisible = [cardC, cardR].some(function(c){ return c && c.style.display !== 'none'; });
+      if(!anyVisible) closeAll();
+    };
   });
-  chuseok.show();
+  document.getElementById('ppCloseAll').onclick = closeAll;
+  document.getElementById('ppTodayAll').onclick = function(){ mark('pp_chuseok_v1'); mark('pp_r20_v1'); closeAll(); };
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeAll(); });
 })();
 </script>
 
