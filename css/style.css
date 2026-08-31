@@ -460,7 +460,7 @@ html.js .fade-up:not(.visible){opacity:0;transform:translateY(36px)}
   margin-bottom:18px;
   box-shadow:0 4px 16px rgba(184,134,11,.35);
 }
-.doctors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.doctors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .doctor-card{
   background:var(--white);border-radius:var(--radius-xl);
   overflow:hidden;
