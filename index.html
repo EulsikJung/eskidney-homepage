@@ -26,7 +26,7 @@
   <meta name="twitter:title" content="정을식내과의원 | 인천 간석오거리 신장내과"/>
   <meta name="twitter:description" content="인공신장실·프리미엄 주치의·건강검진. 신장내과 전문의 직접 운영."/>
   <meta name="twitter:image" content="https://eskidney.co.kr/pictures/dialysis_main.jpg"/>
-  <link rel="stylesheet" href="css/style.css?v=12"/>
+  <link rel="stylesheet" href="css/style.css?v=13"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script type="application/ld+json">
 {
@@ -684,6 +684,23 @@
       <h2 class="section-title">의료장비</h2>
       <p class="section-sub">정확한 진단과 안전한 치료를 위한 의료장비</p>
     </div>
+
+    <!-- R20 신규 초음파 하이라이트 -->
+    <div class="r20-feature fade-up">
+      <div class="r20-photo"><img src="pictures/eq_r20.jpg" alt="삼성메디슨 R20 초음파 진단 시스템"></div>
+      <div class="r20-text">
+        <span class="r20-badge">NEW · 새로 도입</span>
+        <h3>삼성메디슨 R20<br>초음파 진단 시스템</h3>
+        <p>2025년 출시된 신형 초음파 장비를 새로 도입했습니다. 고해상도 이미징과 OLED 모니터, AI 기반 진단 보조 기능으로 복부·갑상선·경동맥·근골격 등 정밀 초음파 검사를 제공합니다.</p>
+        <div class="r20-chips">
+          <span>고해상도 이미징</span>
+          <span>OLED 모니터</span>
+          <span>AI 진단 보조</span>
+          <span>복부·갑상선·혈관 검사</span>
+        </div>
+      </div>
+    </div>
+
     <div class="equip-tabs fade-up">
       <button class="equip-tab active" data-tab="equip-dialysis">혈액투석</button>
       <button class="equip-tab" data-tab="equip-endoscopy">내시경</button>
@@ -719,8 +736,12 @@
 
     <div class="equipment-panel equip-grid-3" id="equip-imaging">
       <div class="equip-card fade-up">
+        <div class="equip-img" style="background:#000;"><img src="pictures/eq_r20.jpg" alt="Samsung Medison R20 초음파" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:12px;"></div>
+        <div class="equip-info"><div class="maker">Samsung Medison</div><h4>R20 <span style="font-size:.7rem;font-weight:800;color:var(--primary);background:var(--primary-light);padding:2px 8px;border-radius:100px;vertical-align:middle;">NEW</span></h4><p>2025년 출시 신형 초음파를 새로 도입. 복부·갑상선·경동맥 등 정밀 검사.</p></div>
+      </div>
+      <div class="equip-card fade-up">
         <div class="equip-img"><img src="pictures/eq_us.jpg" alt="Samsung Medison HS70A 초음파" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:12px;"></div>
-        <div class="equip-info"><div class="maker">Samsung Medison</div><h4>HS70A</h4><p>삼성메디슨 프리미엄 초음파. 복부·심장·경동맥 검사 가능.</p></div>
+        <div class="equip-info"><div class="maker">Samsung Medison</div><h4>HS70A</h4><p>삼성메디슨 초음파. 복부·심장·경동맥 검사 가능.</p></div>
       </div>
       <div class="equip-card fade-up">
         <div class="equip-img"><img src="pictures/eq_xray.jpg" alt="디지털 X-ray DR System" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:12px;"></div>
@@ -941,16 +962,33 @@
   <a href="pages/contact.html" class="mbb-btn"><i class="fa-solid fa-map-location-dot"></i>오시는길</a>
 </div>
 
-<!-- ══════════════════ 추석 연휴 진료 안내 팝업 ══════════════════ -->
+<!-- ══════════════════ 팝업 공지 (추석 + R20 신규 초음파) ══════════════════ -->
 <div id="holidayPopup" style="display:none; position:fixed; inset:0; z-index:3000; background:rgba(10,22,40,.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
-  <div style="position:relative; width:100%; max-width:720px;">
-    <button id="hpClose" aria-label="닫기" style="position:absolute; top:-14px; right:-14px; width:40px; height:40px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.3rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:2;">&times;</button>
-    <div style="background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 24px 70px rgba(0,0,0,.35);">
-      <img src="pictures/chuseok.png?v=1" alt="9월 24일(목)~26일(토) 추석 연휴 외래진료 휴무, 인공신장실 정상 운영 안내" style="width:100%; display:block;">
-      <div style="display:flex; border-top:1px solid #eef2f7;">
-        <button id="hpTodayClose" style="flex:1; padding:14px; background:#f8fafc; color:#64748b; font-size:.88rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
-        <button id="hpConfirm" style="flex:1; padding:14px; background:#fff; color:var(--primary); font-size:.88rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
+  <div style="position:relative; width:100%; max-width:600px; max-height:92vh; overflow-y:auto;">
+    <button id="hpClose" aria-label="닫기" style="position:absolute; top:-6px; right:-6px; width:40px; height:40px; border:none; border-radius:50%; background:#fff; color:#333; font-size:1.3rem; line-height:1; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.3); z-index:3;">&times;</button>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <!-- 추석 연휴 안내 -->
+      <div id="popupChuseok" style="background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.32);">
+        <img src="pictures/chuseok.png?v=1" alt="9월 24일(목)~26일(토) 추석 연휴 외래진료 휴무, 인공신장실 정상 운영 안내" style="width:100%; display:block;">
       </div>
+
+      <!-- R20 신규 초음파 -->
+      <div style="background:#000; border-radius:18px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.32);">
+        <img src="pictures/r20_popup.jpg" alt="삼성메디슨 R20 초음파 새로 도입" style="width:100%; display:block;">
+        <div style="background:linear-gradient(135deg,#0B3D8F,#06214d); color:#fff; padding:20px 22px;">
+          <span style="display:inline-block; background:#7EC8E3; color:#06214d; font-size:.7rem; font-weight:800; letter-spacing:.08em; padding:3px 11px; border-radius:100px; margin-bottom:11px;">NEW · 새로 도입</span>
+          <h3 style="font-size:1.25rem; font-weight:800; margin:0 0 8px;">삼성메디슨 R20 초음파</h3>
+          <p style="font-size:.92rem; color:rgba(255,255,255,.85); line-height:1.75; margin:0;">2025년 출시된 신형 초음파 장비를 새로 도입했습니다. 복부·갑상선·경동맥 등 정밀 초음파 검사를 제공합니다.</p>
+        </div>
+      </div>
+
+      <!-- 버튼 -->
+      <div style="display:flex; border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.28);">
+        <button id="hpTodayClose" style="flex:1; padding:15px; background:#f8fafc; color:#64748b; font-size:.9rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid #eef2f7;">오늘 하루 보지 않기</button>
+        <button id="hpConfirm" style="flex:1; padding:15px; background:#fff; color:var(--primary); font-size:.9rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
+      </div>
+
     </div>
   </div>
 </div>
@@ -959,17 +997,19 @@
 (function(){
   var popup = document.getElementById('holidayPopup');
   if(!popup) return;
-  // 추석 연휴(9/24~26) 종료 후 9/27부터 자동으로 안 뜸
-  if(new Date() >= new Date(2026, 8, 27, 0, 0, 0)) return;
+  // 추석 연휴(9/24~26) 종료 후 9/27부터 추석 카드만 숨김 (R20 안내는 계속)
+  if(new Date() >= new Date(2026, 8, 27, 0, 0, 0)){
+    var c = document.getElementById('popupChuseok'); if(c) c.style.display = 'none';
+  }
   var todayKey = new Date().toDateString();
-  try { if(localStorage.getItem('hp_holiday_0924') === todayKey) return; } catch(e){}
+  try { if(localStorage.getItem('hp_popup_v2') === todayKey) return; } catch(e){}
   popup.style.display = 'flex';
   document.body.style.overflow = 'hidden';
   function close(){ popup.style.display='none'; document.body.style.overflow=''; }
   document.getElementById('hpConfirm').onclick = close;
   document.getElementById('hpClose').onclick = close;
   document.getElementById('hpTodayClose').onclick = function(){
-    try { localStorage.setItem('hp_holiday_0924', todayKey); } catch(e){}
+    try { localStorage.setItem('hp_popup_v2', todayKey); } catch(e){}
     close();
   };
   popup.addEventListener('click', function(e){ if(e.target === popup) close(); });
