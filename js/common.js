@@ -81,6 +81,7 @@
       </nav>
       <div class="header-cta">
         <a href="tel:032-426-2301" class="btn-call"><i class="fa-solid fa-phone"></i> 032-426-2301</a>
+        <a href="https://m.booking.naver.com/booking/13/bizes/1108509/items/5747934" target="_blank" rel="noopener" class="btn-naver"><i class="fa-regular fa-calendar-check"></i> 네이버 예약</a>
         <a href="http://pf.kakao.com/_khLJT" target="_blank" class="btn-kakao"><i class="fa-solid fa-comment"></i> 카카오 상담</a>
       </div>
       <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
@@ -138,6 +139,7 @@
   </ul>
   <div class="mobile-nav-foot">
     <a href="tel:032-426-2301" class="btn-call"><i class="fa-solid fa-phone"></i> 032-426-2301</a>
+    <a href="https://m.booking.naver.com/booking/13/bizes/1108509/items/5747934" target="_blank" rel="noopener" class="btn-naver"><i class="fa-regular fa-calendar-check"></i> 네이버 예약</a>
     <a href="http://pf.kakao.com/_khLJT" target="_blank" class="btn-kakao"><i class="fa-solid fa-comment"></i> 카카오 상담</a>
   </div>
 </div>`;
@@ -167,6 +169,7 @@
 
 <div class="floats">
   <a href="http://pf.kakao.com/_khLJT" target="_blank" class="float-btn kakao"><i class="fa-solid fa-comment"></i></a>
+  <a href="https://m.booking.naver.com/booking/13/bizes/1108509/items/5747934" target="_blank" rel="noopener" class="float-btn naver" title="네이버 예약"><i class="fa-regular fa-calendar-check"></i></a>
   <a href="tel:032-426-2301" class="float-btn phone"><i class="fa-solid fa-phone"></i></a>
   <button class="float-btn top"><i class="fa-solid fa-chevron-up"></i></button>
 </div>
@@ -174,6 +177,7 @@
 <div class="mobile-bottom-bar">
   <a href="tel:032-426-2301" class="mbb-btn call"><i class="fa-solid fa-phone"></i>전화</a>
   <a href="http://pf.kakao.com/_khLJT" target="_blank" class="mbb-btn kakao"><i class="fa-solid fa-comment"></i>카카오</a>
+  <a href="https://m.booking.naver.com/booking/13/bizes/1108509/items/5747934" target="_blank" rel="noopener" class="mbb-btn naver"><i class="fa-regular fa-calendar-check"></i>예약</a>
   <a href="${pagesBase}contact.html" class="mbb-btn"><i class="fa-solid fa-map-location-dot"></i>오시는길</a>
 </div>
 

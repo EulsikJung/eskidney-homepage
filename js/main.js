@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     floats.className = 'floats';
     floats.innerHTML =
       '<a href="http://pf.kakao.com/_khLJT" target="_blank" rel="noopener" class="float-btn kakao" title="' + kakaoTitle + '"><i class="fa-solid fa-comment"></i></a>' +
+      ((!isEn && !isZh) ? '<a href="https://m.booking.naver.com/booking/13/bizes/1108509/items/5747934" target="_blank" rel="noopener" class="float-btn naver" title="네이버 예약"><i class="fa-regular fa-calendar-check"></i></a>' : '') +
       '<a href="tel:032-426-2301" class="float-btn phone" title="' + phoneTitle + '"><i class="fa-solid fa-phone"></i></a>' +
       '<button class="float-btn top" title="' + topTitle + '"><i class="fa-solid fa-chevron-up"></i></button>';
     document.body.appendChild(floats);
