@@ -161,6 +161,7 @@
         <a href="${pagesBase}about.html">병원소개</a>
         <a href="${pagesBase}contact.html">오시는길</a>
         <a href="${pagesBase}fees.html">비급여고지</a>
+        <a href="${pagesBase}privacy.html"><strong>개인정보처리방침</strong></a>
       </div>
     </div>
     <div class="footer-copy">© 2025 정을식내과의원. All rights reserved.</div>
