@@ -22,33 +22,55 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(floats);
   }
 
-  /* ── 0-1. 장비 사진 누르면 크게 보기 (equip-card 이미지) ── */
+  /* ── 0-1. 장비 카드 누르면 상세 창 (장비소개) / 메인은 장비소개 상세로 이동 ── */
   (function(){
-    var imgs = document.querySelectorAll('.equip-card .equip-img img');
-    if (!imgs.length) return;
-    var lb = document.createElement('div');
-    lb.className = 'equip-lightbox';
-    lb.setAttribute('role','dialog');
-    lb.setAttribute('aria-modal','true');
-    lb.innerHTML = '<button class="elb-close" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button><figure><img alt=""><figcaption></figcaption></figure>';
-    document.body.appendChild(lb);
-    var big = lb.querySelector('img'), cap = lb.querySelector('figcaption');
-    function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
-    lb.addEventListener('click', function(e){ if (e.target !== big) close(); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
-    imgs.forEach(function(im){
-      im.setAttribute('tabindex','0');
-      im.setAttribute('role','button');
-      function open(){
-        big.src = im.currentSrc || im.src; big.alt = im.alt || '';
-        var card = im.closest('.equip-card'), h = card && card.querySelector('h4'), mk = card && card.querySelector('.maker');
-        cap.textContent = [mk && mk.textContent.trim(), h && h.textContent.trim()].filter(Boolean).join(' · ') || im.alt || '';
-        if (/제조사 제공/.test(im.alt || '')) cap.textContent += ' (제조사 제공 이미지)';
-        lb.classList.add('open'); document.body.style.overflow='hidden';
-      }
-      im.addEventListener('click', open);
-      im.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    document.querySelectorAll('.equip-card[data-eq-link]').forEach(function(card){
+      card.classList.add('eq-clickable');
+      card.setAttribute('tabindex','0'); card.setAttribute('role','link');
+      function go(){ location.href = card.getAttribute('data-eq-link'); }
+      card.addEventListener('click', go);
+      card.addEventListener('keydown', function(e){ if (e.key === 'Enter') go(); });
     });
+    var cards = document.querySelectorAll('.equip-card[data-eq]');
+    if (!cards.length) return;
+    var md = document.createElement('div');
+    md.className = 'equip-modal';
+    md.setAttribute('role','dialog'); md.setAttribute('aria-modal','true');
+    md.innerHTML = '<div class="em-box"><button class="em-close" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button><div class="em-media"></div><div class="em-body"><div class="em-maker"></div><h3 class="em-title"></h3><p class="em-sum"></p><div class="em-detail"></div></div></div>';
+    document.body.appendChild(md);
+    var media = md.querySelector('.em-media'), box = md.querySelector('.em-box');
+    function close(){
+      md.classList.remove('open'); document.body.style.overflow='';
+      if (location.hash.indexOf('#eq-') === 0) history.replaceState(null, '', location.pathname + location.search);
+    }
+    md.addEventListener('click', function(e){ if (!box.contains(e.target) || e.target.closest('.em-close')) close(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && md.classList.contains('open')) close(); });
+    function open(card){
+      var img = card.querySelector('.equip-img img'), ph = card.querySelector('.equip-img .placeholder-img');
+      media.innerHTML = '';
+      box.classList.toggle('em-noimg', !img);
+      if (img) {
+        var im = document.createElement('img'); im.src = img.currentSrc || img.src; im.alt = img.alt || ''; media.appendChild(im);
+        if (/제조사 제공/.test(img.alt || '')) { var t = document.createElement('span'); t.className = 'em-src'; t.textContent = '제조사 제공 이미지'; media.appendChild(t); }
+      } else if (ph) { media.appendChild(ph.cloneNode(true)); }
+      var mk = card.querySelector('.maker'), h = card.querySelector('h4'), p = card.querySelector('.equip-info > p'), d = card.querySelector('.equip-detail');
+      md.querySelector('.em-maker').textContent = mk ? mk.textContent.trim() : '';
+      md.querySelector('.em-title').innerHTML = h ? h.innerHTML : '';
+      md.querySelector('.em-sum').textContent = p ? p.textContent.trim() : '';
+      md.querySelector('.em-detail').innerHTML = d ? d.innerHTML : '';
+      md.classList.add('open'); document.body.style.overflow='hidden'; box.scrollTop = 0;
+      md.querySelector('.em-close').focus();
+    }
+    cards.forEach(function(card){
+      card.classList.add('eq-clickable');
+      card.setAttribute('tabindex','0'); card.setAttribute('role','button');
+      card.addEventListener('click', function(){ open(card); });
+      card.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); } });
+    });
+    if (location.hash.indexOf('#eq-') === 0) {
+      var target = document.getElementById(location.hash.slice(1));
+      if (target && target.hasAttribute('data-eq')) { target.scrollIntoView({block:'center'}); open(target); }
+    }
   })();
 
   /* ── 1. 헤더 스크롤 효과 ── */
