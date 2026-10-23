@@ -53,7 +53,7 @@
           </li>
           <li><a href="${pagesBase}outpatient.html">외래진료 <i class="fa-solid fa-chevron-down"></i></a>
             <ul class="dropdown">
-              <li><a href="${pagesBase}outpatient.html#premium"><i class="fa-solid fa-star"></i> 프리미엄 주치의</a></li>
+              <li><a href="${pagesBase}outpatient.html#premium"><i class="fa-solid fa-star"></i> 평생 주치의</a></li>
               <li><a href="${pagesBase}outpatient.html#dialysis"><i class="fa-solid fa-heart-pulse"></i> 혈액투석</a></li>
               <li><a href="${pagesBase}outpatient.html#kidney"><i class="fa-solid fa-droplet"></i> 신장질환</a></li>
               <li><a href="${pagesBase}outpatient.html#chronic"><i class="fa-solid fa-heart"></i> 만성질환</a></li>
@@ -116,7 +116,7 @@
     </li>
     <li><a href="#">외래진료 <i class="fa-solid fa-chevron-down"></i></a>
       <ul class="mobile-sub">
-        <li><a href="${pagesBase}outpatient.html">프리미엄 주치의</a></li>
+        <li><a href="${pagesBase}outpatient.html">평생 주치의</a></li>
         <li><a href="${pagesBase}outpatient.html#kidney">신장내과</a></li>
         <li><a href="${pagesBase}outpatient.html#internal">내분비·심혈관·소화기</a></li>
       </ul>
