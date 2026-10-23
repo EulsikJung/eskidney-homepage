@@ -516,7 +516,7 @@
         <div class="service-content">
           <div class="service-icon-wrap"><i class="fa-solid fa-microscope"></i></div>
           <h3>의료장비</h3>
-          <p>후지 ELUXEO 6000 내시경, 삼성메디슨 초음파, InBody BWA, Osteosys Dexxum T.</p>
+          <p>후지 ELUXEO 6000 내시경, 삼성메디슨 초음파, InBody BWA, OsteoSys DEXXUM T Quantum.</p>
           <a href="pages/equipment.html" class="service-link">장비 소개 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
@@ -761,8 +761,8 @@
         <div class="equip-info"><div class="maker">InBody</div><h4>BWA</h4><p>체수분·체성분 정밀 분석. 투석 환자 체수분 관리 지원.</p></div>
       </div>
       <div class="equip-card fade-up">
-        <div class="equip-img"><img src="pictures/eq_bmd.jpg" alt="Osteosys Dexxum T" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:12px;"></div>
-        <div class="equip-info"><div class="maker">Osteosys</div><h4>Dexxum T</h4><p>DXA 방식 정밀 골밀도 측정기. 골다공증 조기 진단.</p></div>
+        <div class="equip-img"><div class="placeholder-img"><i class="fa-solid fa-bone"></i></div></div>
+        <div class="equip-info"><div class="maker">OsteoSys</div><h4>DEXXUM T Quantum</h4><p>팬빔(Fan beam) 방식 DXA 골밀도 측정기. 척추·대퇴골 골밀도를 측정합니다.</p></div>
       </div>
       <div class="equip-card fade-up">
         <div class="equip-img"><div class="placeholder-img"><i class="fa-solid fa-heart"></i></div></div>
@@ -1005,6 +1005,27 @@
         </div>
       </div>
 
+      <!-- 골밀도 검사기 교체 카드 (~11/30 표시) -->
+      <div class="pp-card" id="ppCardBmd" style="flex:0 1 330px; max-width:330px; display:flex; flex-direction:column; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+        <div style="padding:11px 18px; background:var(--primary); color:#fff; display:flex; align-items:center; gap:9px; font-size:.9rem; font-weight:700;"><i class="fa-solid fa-bone"></i> 골밀도 검사기 교체 <span style="font-weight:800; color:#bff0d4;">NEW</span></div>
+        <div style="background:linear-gradient(180deg,#f0f7ff 0%,#fff 100%); padding:20px 18px 14px; text-align:center;">
+          <div style="font-size:.78rem; font-weight:700; color:#64748b; letter-spacing:.02em;">OsteoSys</div>
+          <div style="font-size:1.3rem; font-weight:800; color:#0f172a; margin:2px 0 10px;">DEXXUM T Quantum</div>
+          <div style="display:flex; gap:5px; justify-content:center; flex-wrap:wrap;">
+            <span style="font-size:.74rem; font-weight:700; color:#1d4ed8; background:#dbeafe; border-radius:999px; padding:3px 9px;">DXA 방식</span>
+            <span style="font-size:.74rem; font-weight:700; color:#1d4ed8; background:#dbeafe; border-radius:999px; padding:3px 9px;">4채널 팬빔</span>
+            <span style="font-size:.74rem; font-weight:700; color:#1d4ed8; background:#dbeafe; border-radius:999px; padding:3px 9px;">척추·대퇴골 측정</span>
+          </div>
+        </div>
+        <div style="flex:1 1 auto; padding:12px 18px;">
+          <p style="font-size:.85rem; color:var(--gray-700); line-height:1.65; margin:0;">골밀도 검사기를 새 장비로 교체했습니다. 골다공증·골감소증 검사 · 문의 <strong style="white-space:nowrap;">032-426-2301</strong></p>
+        </div>
+        <div style="display:flex; border-top:1px solid #eef2f7;">
+          <button class="pp-today" data-key="pp_bmd_v1" data-card="ppCardBmd" style="flex:1; padding:11px; background:#f8fafc; color:#64748b; font-size:.84rem; font-weight:600; cursor:pointer; border:none; border-right:1px solid #eef2f7;">오늘 하루 그만 보기</button>
+          <button class="pp-close" data-card="ppCardBmd" style="flex:1; padding:11px; background:#fff; color:var(--primary); font-size:.84rem; font-weight:700; cursor:pointer; border:none;">닫기</button>
+        </div>
+      </div>
+
       <!-- 추석 카드 -->
       <div class="pp-card" id="ppCardChuseok" style="flex:0 1 330px; max-width:330px; display:flex; flex-direction:column; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.4);">
         <div style="padding:11px 18px; background:var(--primary); color:#fff; display:flex; align-items:center; gap:9px; font-size:.9rem; font-weight:700;"><i class="fa-solid fa-mug-saucer"></i> 추석 연휴 진료 안내</div>
@@ -1132,6 +1153,7 @@
   var leaveActive = now < new Date(2026, 10, 11, 0, 0, 0);
   var cards = {
     ppCardLeave: (leaveActive && !seen('pp_leave1106_v1')),
+    ppCardBmd: (now < new Date(2026, 11, 1, 0, 0, 0) && !seen('pp_bmd_v1')),
     ppCardChuseok: (!chuseokExpired && !seen('pp_chuseok_v2')),
     ppCardOct: (octActive && !seen('pp_oct_v1')),
     ppCardFlu: !seen('pp_influenza_v2'),
