@@ -823,3 +823,13 @@ html.js .fade-up:not(.visible){opacity:0;transform:translateY(36px)}
   .r20-feature .r20-photo img{object-position:center;}
   .r20-feature .r20-text{padding:28px 24px;}
 }
+
+/* ===== 장비 사진 확대 보기 ===== */
+.equip-card .equip-img img{cursor:zoom-in}
+.equip-lightbox{position:fixed;inset:0;z-index:4000;background:rgba(10,22,40,.85);display:none;align-items:center;justify-content:center;padding:24px}
+.equip-lightbox.open{display:flex}
+.equip-lightbox figure{margin:0;max-width:min(1100px,94vw);text-align:center}
+.equip-lightbox img{max-width:100%;max-height:82vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#fff;cursor:default}
+.equip-lightbox figcaption{color:#fff;font-size:.95rem;font-weight:700;margin-top:12px}
+.equip-lightbox .elb-close{position:absolute;top:16px;right:18px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:1.3rem;cursor:pointer}
+.equip-lightbox .elb-close:hover{background:rgba(255,255,255,.3)}

@@ -22,6 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(floats);
   }
 
+  /* ── 0-1. 장비 사진 누르면 크게 보기 (equip-card 이미지) ── */
+  (function(){
+    var imgs = document.querySelectorAll('.equip-card .equip-img img');
+    if (!imgs.length) return;
+    var lb = document.createElement('div');
+    lb.className = 'equip-lightbox';
+    lb.setAttribute('role','dialog');
+    lb.setAttribute('aria-modal','true');
+    lb.innerHTML = '<button class="elb-close" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button><figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(lb);
+    var big = lb.querySelector('img'), cap = lb.querySelector('figcaption');
+    function close(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+    lb.addEventListener('click', function(e){ if (e.target !== big) close(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+    imgs.forEach(function(im){
+      im.setAttribute('tabindex','0');
+      im.setAttribute('role','button');
+      function open(){
+        big.src = im.currentSrc || im.src; big.alt = im.alt || '';
+        var card = im.closest('.equip-card'), h = card && card.querySelector('h4'), mk = card && card.querySelector('.maker');
+        cap.textContent = [mk && mk.textContent.trim(), h && h.textContent.trim()].filter(Boolean).join(' · ') || im.alt || '';
+        if (/제조사 제공/.test(im.alt || '')) cap.textContent += ' (제조사 제공 이미지)';
+        lb.classList.add('open'); document.body.style.overflow='hidden';
+      }
+      im.addEventListener('click', open);
+      im.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+  })();
+
   /* ── 1. 헤더 스크롤 효과 ── */
   const header = document.getElementById('header');
   const topBtn = document.querySelector('.float-btn.top');
