@@ -1157,8 +1157,8 @@
     ppCardBmd: (now < new Date(2026, 11, 1, 0, 0, 0) && !seen('pp_bmd_v1')),
     ppCardChuseok: (!chuseokExpired && !seen('pp_chuseok_v2')),
     ppCardOct: (octActive && !seen('pp_oct_v1')),
-    ppCardFlu: !seen('pp_influenza_v2'),
-    ppCardR20: !seen('pp_r20_v2')
+    ppCardFlu: (now < new Date(2026, 10, 16, 0, 0, 0) && !seen('pp_influenza_v2')),
+    ppCardR20: (now < new Date(2027, 0, 1, 0, 0, 0) && !seen('pp_r20_v2'))
   };
   var anyShown = false;
   Object.keys(cards).forEach(function(id){
